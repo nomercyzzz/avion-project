@@ -48,7 +48,7 @@ button {
     cursor: pointer;
     font-family: inherit;
     border: none;
-    transition: 0.3s;
+    transition: 0.3s ease-out; 
 }
 
 input {
@@ -66,20 +66,15 @@ input {
     font-size: 16px;
     background: var(--color-primary);
     color: var(--color-white);
-    transition: 0.3s;
+    transition: 0.3s ease-out;
 }
 
 .button:hover {
     background: var(--color-secondary);
 }
 
-.button:focus {
-    outline: 2px solid var(--color-primary);
-    outline-offset: 2px;
-}
-
 .button:active {
-    transform: scale(0.98);
+    transform: scale(0.96);
 }
 
 .button--light {
@@ -104,7 +99,6 @@ input {
 /* хедер */
 
 .header {
-    max-width: 1280px;
     margin: 0 auto;
     padding: 0 24px;
 }
@@ -168,8 +162,10 @@ input {
     left: 0;
     width: 0;
     height: 2px;
+    left: 50%;
+    transform: translateX(-50%);
     background: var(--color-primary);
-    transition: 0.3s;
+    transition: 0.3s ease-out;
 }
 
 .nav__link:hover {
@@ -364,10 +360,13 @@ input {
 /* рассылка*/
 
 .newsletter {
-    background: var(--color-bg-beige);
-    padding: 60px 24px;
+    background: var(--color-bg-light);
+    padding: 40px 60px;
     text-align: center;
-    margin-top: 60px;
+}
+.newsletter__inner {
+    background: var(--color-white);
+    padding: 80px 60px;
 }
 
 .newsletter__title {
@@ -378,7 +377,7 @@ input {
 
 .newsletter__text {
     color: var(--color-text-gray);
-    max-width: 500px;
+    max-width: 800px;
     margin: 0 auto 32px;
 }
 
@@ -390,12 +389,18 @@ input {
 }
 
 .newsletter__input {
-    flex: 1;
+    width: 100%;
+    background: var(--color-bg-light);
     padding: 16px 20px;
     font-size: 16px;
+    outline: 2px solid transparent;
+    transition: 0.3s ease-out;
+}
+.newsletter__input::placeholder {
+    color: var(--color-text-gray);
 }
 
-.newsletter__input:focus {
+.newsletter__input:hover {
     outline: 2px solid var(--color-primary);
 }
 
@@ -511,7 +516,6 @@ input {
 
 .footer__bottom p {
     font-size: 14px;
-    opacity: 0.8;
 }
 
 .footer__socials {
@@ -521,12 +525,10 @@ input {
 
 .footer__socials img {
     width: 24px;
-    filter: invert(1);
-    opacity: 0.8;
-    transition: 0.3s;
+    transition: 0.3s ease-out;
 }
 
 .footer__socials a:hover img {
     opacity: 1;
-    transform: scale(1.1);
+    transform: scale(1.10);
 }
