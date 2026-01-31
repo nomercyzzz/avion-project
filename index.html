@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 1024px)">
     <title>Avion</title>
 </head>
 <body>
@@ -19,10 +20,16 @@
             <div class="header__actions">
                 <a href="#"><img src="assets/icons/shopping.png" alt="Корзина"></a>
                 <a href="#"><img src="assets/icons/user.png" alt="Профиль"></a>
+
+                <button class="menu-toggle" id="menuToggle">
+                    <span class="menu-toggle__line"></span>
+                    <span class="menu-toggle__line"></span>
+                    <span class="menu-toggle__line"></span>
+                </button>
             </div>
         </div>
 
-        <nav class="nav">
+        <nav class="nav" id="mainNav">
             <ul class="nav__list">
                 <li><a href="#products" class="nav__link">Кашпо</a></li>
                 <li><a href="#products" class="nav__link">Керамика</a></li>
@@ -216,5 +223,7 @@
         </div>
     </footer>
 
+    <button class="scroll-top" id="scrollTop">&uarr;</button>
+    <script src="scripts/menu.js"></script>
 </body>
 </html>
